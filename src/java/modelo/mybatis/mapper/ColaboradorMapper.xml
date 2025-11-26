@@ -37,6 +37,40 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         FROM colaborador
         WHERE no_personal = #{noPersonal} 
         AND contrasenia = #{contrasenia}
+    </select> 
+    
+    <insert id="registrar" parameterType="pojo.Colaborador">
+        INSERT INTO colaborador 
+            (no_personal, contrasenia, nombre, apellido_paterno, apellido_materno, curp, correo, foto, rol, num_licencia, id_sucursal)
+        VALUES 
+            (#{noPersonal}, #{contrasenia}, #{nombre}, #{apellidoPaterno}, #{apellidoMaterno}, #{curp}, #{correo}, #{foto}, #{rol}, #{numLicencia}, #{idSucursal})
+    </insert>
+    
+    <update id="editar" parameterType="pojo.Colaborador">
+        UPDATE colaborador SET
+            contrasenia = #{contrasenia},
+            nombre = #{nombre},
+            apellido_paterno = #{apellidoPaterno},
+            apellido_materno = #{apellidoMaterno},
+            curp = #{curp},
+            correo = #{correo},
+            foto = #{foto},
+            num_licencia = #{numLicencia},
+            id_sucursal = #{idSucursal}
+        WHERE no_personal = #{noPersonal}
+    </update>
+    
+    <delete id="eliminar" parameterType="string">
+        DELETE FROM colaborador 
+        WHERE no_personal = #{noPersonal}
+    </delete>
+    
+    <select id="buscar" resultMap="mapaColaborador" parameterType="string">
+        SELECT * FROM colaborador
+        WHERE no_personal LIKE #{filtro}
+           OR nombre LIKE #{filtro}
+           OR rol LIKE #{filtro}
+           OR apellido_paterno LIKE #{filtro}
     </select>
     
 </mapper>
