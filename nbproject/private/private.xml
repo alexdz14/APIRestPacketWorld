@@ -15,6 +15,10 @@
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/SucursalMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/SucursalImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/SucursalWS.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Unidad.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/UnidadMapper.xml</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/UnidadImp.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/UnidadWS.java</file>
         </group>
     </open-files>
 </project-private>

@@ -12,7 +12,7 @@
     </properties>
 
     <typeAliases>
-        </typeAliases>
+    </typeAliases>
     
     <environments default="desarrollo">
         <environment id="desarrollo">
@@ -20,7 +20,8 @@
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
-                <property name="username" value="${usuario}"/> <property name="password" value="${contrasenia}"/>
+                <property name="username" value="${usuario}"/> 
+                <property name="password" value="${contrasenia}"/>
             </dataSource>
         </environment>
     </environments>
@@ -28,6 +29,7 @@
     <mappers>
         <mapper resource="modelo/mybatis/mapper/ColaboradorMapper.xml"/>
         <mapper resource="modelo/mybatis/mapper/SucursalMapper.xml"/>
+        <mapper resource="modelo/mybatis/mapper/UnidadMapper.xml"/>
     </mappers>
     
 </configuration>

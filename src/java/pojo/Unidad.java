@@ -15,11 +15,12 @@ public class Unidad {
     private String nii;
     private String estatus;
     private Integer idConductorAsignado;
+    private String motivo;
 
     public Unidad() {
     }
 
-    public Unidad(Integer idUnidad, String marca, String modelo, String anio, String vin, String tipoUnidad, String nii, String estatus, Integer idConductorAsignado) {
+    public Unidad(Integer idUnidad, String marca, String modelo, String anio, String vin, String tipoUnidad, String nii, String estatus, Integer idConductorAsignado, String motivo) {
         this.idUnidad = idUnidad;
         this.marca = marca;
         this.modelo = modelo;
@@ -29,6 +30,7 @@ public class Unidad {
         this.nii = nii;
         this.estatus = estatus;
         this.idConductorAsignado = idConductorAsignado;
+        this.motivo = motivo;
     }
 
     public Integer getIdUnidad() {
@@ -102,4 +104,13 @@ public class Unidad {
     public void setIdConductorAsignado(Integer idConductorAsignado) {
         this.idConductorAsignado = idConductorAsignado;
     }
+
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+    
 }
