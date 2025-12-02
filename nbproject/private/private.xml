@@ -6,8 +6,8 @@
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mybatis-config.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/MyBatisUtil.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dto/Respuesta.java</file>
-            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Colaborador.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/ColaboradorMapper.xml</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Colaborador.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/ColaboradorImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/ColaboradorWS.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/ApplicationConfig.java</file>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sucursal">
+    
+    <resultMap id="mapaSucursal" type="pojo.Sucursal">
+        <id property="idSucursal" column="id_sucursal" />
+        <result property="codigoSucursal" column="codigo_sucursal" />
+        <result property="nombre" column="nombre" />
+        <result property="calle" column="calle" />
+        <result property="numero" column="numero" />
+        <result property="colonia" column="colonia" />
+        <result property="cp" column="cp" />
+        <result property="ciudad" column="ciudad" />
+        <result property="estado" column="estado" />
+        <result property="estatus" column="estatus" />
+    </resultMap>
+
+    <insert id="registrar" parameterType="pojo.Sucursal">
+        INSERT INTO sucursal 
+            (codigo_sucursal, nombre, calle, numero, colonia, cp, ciudad, estado, estatus)
+        VALUES 
+            (#{codigoSucursal}, #{nombre}, #{calle}, #{numero}, #{colonia}, #{cp}, #{ciudad}, #{estado}, 'Activa')
+    </insert>
+
+    <update id="editar" parameterType="pojo.Sucursal">
+        UPDATE sucursal SET
+            nombre = #{nombre},
+            calle = #{calle},
+            numero = #{numero},
+            colonia = #{colonia},
+            cp = #{cp},
+            ciudad = #{ciudad},
+            estado = #{estado}
+        WHERE id_sucursal = #{idSucursal}
+    </update>
+
+    <update id="darBaja" parameterType="int">
+        UPDATE sucursal 
+        SET estatus = 'Inactiva' 
+        WHERE id_sucursal = #{idSucursal}
+    </update>
+
+    <select id="getAll" resultMap="mapaSucursal">
+        SELECT * FROM sucursal
+    </select>
+
+</mapper>
