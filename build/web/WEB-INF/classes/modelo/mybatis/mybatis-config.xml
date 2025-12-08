@@ -6,7 +6,12 @@
     
     <properties>
         <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+<<<<<<< HEAD
         <property name="url" value="jdbc:mysql://localhost:3306/packetworld_db?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;useTimezone=true&amp;serverTimezone=UTC"/>
+=======
+        <property name="url" 
+                  value="jdbc:mysql://localhost:3306/packetworld_db?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"/>
+>>>>>>> 174008daceea6a560bb5ebceaddbf7ad3fcc8f1c
         <property name="usuario" value="supersu48"/>
         <property name="contrasenia" value="TermoPods25!"/>
     </properties>
@@ -33,4 +38,8 @@
         <mapper resource="modelo/mybatis/mapper/ClienteMapper.xml"/>
     </mappers>
     
+<<<<<<< HEAD
 </configuration>
+=======
+</configuration>
+>>>>>>> 174008daceea6a560bb5ebceaddbf7ad3fcc8f1c
