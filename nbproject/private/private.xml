@@ -19,6 +19,10 @@
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/UnidadMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/UnidadImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/UnidadWS.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Cliente.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/ClienteMapper.xml</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/ClienteImp.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/ClienteWS.java</file>
         </group>
     </open-files>
 </project-private>
