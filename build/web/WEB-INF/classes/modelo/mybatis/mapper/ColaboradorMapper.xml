@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="colaborador">
+    
+    <resultMap id="mapaColaborador" type="pojo.Colaborador">
+        <id property="idColaborador" column="id_colaborador" />
+        <result property="noPersonal" column="no_personal" />
+        <result property="contrasenia" column="contrasenia" />
+        <result property="nombre" column="nombre" />
+        <result property="apellidoPaterno" column="apellido_paterno" />
+        <result property="apellidoMaterno" column="apellido_materno" />
+        <result property="curp" column="curp" />
+        <result property="correo" column="correo" />
+        <result property="foto" column="foto" />
+        <result property="rol" column="rol" />
+        <result property="numLicencia" column="num_licencia" />
+        <result property="idSucursal" column="id_sucursal" />
+    </resultMap>
+
+    <select id="login" resultMap="mapaColaborador" parameterType="map">
+        SELECT 
+            id_colaborador, 
+            no_personal, 
+            contrasenia, 
+            nombre, 
+            apellido_paterno, 
+            apellido_materno,
+            curp,
+            correo,
+            foto,
+            rol,
+            num_licencia,
+            id_sucursal
+        FROM colaborador
+        WHERE no_personal = #{noPersonal} 
+        AND contrasenia = #{contrasenia}
+    </select> 
+    
+    <insert id="registrar" parameterType="pojo.Colaborador">
+        INSERT INTO colaborador 
+            (no_personal, contrasenia, nombre, apellido_paterno, apellido_materno, curp, correo, foto, rol, num_licencia, id_sucursal)
+        VALUES 
+            (#{noPersonal}, #{contrasenia}, #{nombre}, #{apellidoPaterno}, #{apellidoMaterno}, #{curp}, #{correo}, #{foto}, #{rol}, #{numLicencia}, #{idSucursal})
+    </insert>
+    
+    <update id="editar" parameterType="pojo.Colaborador">
+        UPDATE colaborador SET
+            contrasenia = #{contrasenia},
+            nombre = #{nombre},
+            apellido_paterno = #{apellidoPaterno},
+            apellido_materno = #{apellidoMaterno},
+            curp = #{curp},
+            correo = #{correo},
+            foto = #{foto},
+            num_licencia = #{numLicencia},
+            id_sucursal = #{idSucursal}
+        WHERE no_personal = #{noPersonal}
+    </update>
+    
+    <delete id="eliminar" parameterType="string">
+        DELETE FROM colaborador 
+        WHERE no_personal = #{noPersonal}
+    </delete>
+    
+    <select id="buscar" resultMap="mapaColaborador" parameterType="string">
+        SELECT * FROM colaborador
+        WHERE no_personal LIKE #{filtro}
+           OR nombre LIKE #{filtro}
+           OR rol LIKE #{filtro}
+           OR apellido_paterno LIKE #{filtro}
+    </select>
+    
+</mapper>

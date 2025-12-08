@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="unidad">
+    
+    <resultMap id="mapaUnidad" type="pojo.Unidad">
+        <id property="idUnidad" column="id_unidad" />
+        <result property="marca" column="marca" />
+        <result property="modelo" column="modelo" />
+        <result property="anio" column="anio" />
+        <result property="vin" column="vin" />
+        <result property="tipoUnidad" column="tipo_unidad" />
+        <result property="nii" column="nii" />
+        <result property="estatus" column="estatus" />
+        <result property="idConductorAsignado" column="id_conductor_asignado" />
+    </resultMap>
+
+    <insert id="registrar" parameterType="pojo.Unidad">
+        INSERT INTO unidad 
+        (marca, modelo, anio, vin, tipo_unidad, nii, estatus, id_conductor_asignado)
+        VALUES 
+        (#{marca}, #{modelo}, #{anio}, #{vin}, #{tipoUnidad}, #{nii}, 'Activa', #{idConductorAsignado})
+    </insert>
+
+    <update id="editar" parameterType="pojo.Unidad">
+        UPDATE unidad SET
+        marca = #{marca},
+        modelo = #{modelo},
+        anio = #{anio},
+        tipo_unidad = #{tipoUnidad},
+        id_conductor_asignado = #{idConductorAsignado}
+        WHERE id_unidad = #{idUnidad}
+    </update>
+
+    <update id="darBaja" parameterType="pojo.Unidad">
+        UPDATE unidad 
+        SET estatus = 'Baja', 
+            id_conductor_asignado = NULL,
+            motivo = #{motivo} 
+        WHERE id_unidad = #{idUnidad}
+    </update>
+    
+    <select id="getAll" resultMap="mapaUnidad">
+        SELECT * FROM unidad
+    </select>
+    
+    <select id="buscar" resultMap="mapaUnidad" parameterType="string">
+        SELECT * FROM unidad
+        WHERE vin LIKE #{filtro}
+        OR marca LIKE #{filtro}
+        OR nii LIKE #{filtro}
+    </select>
+
+</mapper>

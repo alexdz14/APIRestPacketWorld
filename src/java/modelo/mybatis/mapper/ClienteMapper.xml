@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cliente">
+    
+    <resultMap id="mapaCliente" type="pojo.Cliente">
+        <id property="idCliente" column="id_cliente" />
+        <result property="nombre" column="nombre" />
+        <result property="apellidoPaterno" column="apellido_paterno" />
+        <result property="apellidoMaterno" column="apellido_materno" />
+        <result property="calle" column="calle" />
+        <result property="numero" column="numero" />
+        <result property="colonia" column="colonia" />
+        <result property="cp" column="cp" />
+        <result property="telefono" column="telefono" />
+        <result property="correo" column="correo" />
+    </resultMap>
+
+    <insert id="registrar" parameterType="pojo.Cliente">
+        INSERT INTO cliente 
+        (nombre, apellido_paterno, apellido_materno, calle, numero, colonia, cp, telefono, correo)
+        VALUES 
+        (#{nombre}, #{apellidoPaterno}, #{apellidoMaterno}, #{calle}, #{numero}, #{colonia}, #{cp}, #{telefono}, #{correo})
+    </insert>
+
+    <update id="editar" parameterType="pojo.Cliente">
+        UPDATE cliente SET
+        nombre = #{nombre},
+        apellido_paterno = #{apellidoPaterno},
+        apellido_materno = #{apellidoMaterno},
+        calle = #{calle},
+        numero = #{numero},
+        colonia = #{colonia},
+        cp = #{cp},
+        telefono = #{telefono},
+        correo = #{correo}
+        WHERE id_cliente = #{idCliente}
+    </update>
+
+    <delete id="eliminar" parameterType="int">
+        DELETE FROM cliente WHERE id_cliente = #{idCliente}
+    </delete>
+
+    <select id="getAll" resultMap="mapaCliente">
+        SELECT * FROM cliente
+    </select>
+    
+    <select id="buscar" resultMap="mapaCliente" parameterType="string">
+        SELECT * FROM cliente
+        WHERE nombre LIKE #{filtro}
+        OR apellido_paterno LIKE #{filtro}
+        OR telefono LIKE #{filtro}
+        OR correo LIKE #{filtro}
+    </select>
+
+</mapper>
