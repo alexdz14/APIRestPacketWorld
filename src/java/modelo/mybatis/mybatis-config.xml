@@ -31,6 +31,8 @@
         <mapper resource="modelo/mybatis/mapper/SucursalMapper.xml"/>
         <mapper resource="modelo/mybatis/mapper/UnidadMapper.xml"/>
         <mapper resource="modelo/mybatis/mapper/ClienteMapper.xml"/>
+        <mapper resource="modelo/mybatis/mapper/EnvioMapper.xml"/>
+        <mapper resource="modelo/mybatis/mapper/PaqueteMapper.xml"/>
     </mappers>
     
 </configuration>

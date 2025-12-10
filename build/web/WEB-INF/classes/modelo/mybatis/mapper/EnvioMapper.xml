@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="envio">
+    
+    <insert id="registrarEnvio" parameterType="pojo.Envio" useGeneratedKeys="true" keyProperty="idEnvio">
+        INSERT INTO envio 
+        (numero_guia, costo, estatus, id_sucursal_origen, id_cliente_remitente, 
+        nombre_destinatario, apellido_destinatario, calle_destino, numero_destino, colonia_destino, cp_destino, ciudad_destino, estado_destino)
+        VALUES 
+        (#{numeroGuia}, #{costo}, 'Recibido', #{idSucursalOrigen}, #{idClienteRemitente}, 
+        #{nombreDestinatario}, #{apellidoDestinatario}, #{calleDestino}, #{numeroDestino}, #{coloniaDestino}, #{cpDestino}, #{ciudadDestino}, #{estadoDestino})
+    </insert>
+
+    <insert id="registrarPaquete" parameterType="pojo.Paquete">
+        INSERT INTO paquete 
+        (id_envio, descripcion, peso, alto, ancho, profundidad)
+        VALUES 
+        (#{idEnvio}, #{descripcion}, #{peso}, #{alto}, #{ancho}, #{profundidad})
+    </insert>
+    
+    <select id="buscarPorGuia" resultType="pojo.Envio" parameterType="string">
+        SELECT 
+        id_envio AS idEnvio,
+        numero_guia AS numeroGuia,
+        estatus, 
+        costo,
+        id_sucursal_origen AS idSucursalOrigen,
+        id_cliente_remitente AS idClienteRemitente,
+        nombre_destinatario AS nombreDestinatario,
+        apellido_destinatario AS apellidoDestinatario, 
+        calle_destino AS calleDestino,
+        colonia_destino AS coloniaDestino,
+        ciudad_destino AS ciudadDestino,
+        estado_destino AS estadoDestino
+        FROM envio WHERE numero_guia = #{guia}
+    </select>
+
+</mapper>
