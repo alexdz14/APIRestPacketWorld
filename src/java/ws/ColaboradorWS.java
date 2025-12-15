@@ -73,4 +73,11 @@ public class ColaboradorWS {
     public List<Colaborador> buscarColaborador(@javax.ws.rs.PathParam("filtro") String filtro) {
         return ColaboradorImp.buscar(filtro);
     }
+    
+    @GET
+    @Path("getAll")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Colaborador> getAll() {
+        return ColaboradorImp.obtenerTodos();
+    }
 }

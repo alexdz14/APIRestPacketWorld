@@ -73,4 +73,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
            OR apellido_paterno LIKE #{filtro}
     </select>
     
+    <select id="getAll" resultType="pojo.Colaborador">
+        SELECT 
+            idColaborador, noPersonal, nombre, apellidoPaterno, apellidoMaterno, 
+            curp, correo, foto, rol, numLicencia, idSucursal 
+        FROM colaborador
+    </select>
+    
 </mapper>

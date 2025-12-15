@@ -130,4 +130,19 @@ public class ColaboradorImp {
         
         return lista;
     }
+    
+    public static List<Colaborador> obtenerTodos() {
+        List<Colaborador> lista = new ArrayList<>();
+        SqlSession conexion = MyBatisUtil.getSessionFactory().openSession();
+        
+        try {
+            lista = conexion.selectList("colaborador.getAll");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            conexion.close();
+        }
+        
+        return lista;
+    }
 }

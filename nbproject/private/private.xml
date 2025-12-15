@@ -7,11 +7,9 @@
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/MyBatisUtil.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dto/Respuesta.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/ColaboradorMapper.xml</file>
-            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Colaborador.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/ColaboradorImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/ColaboradorWS.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/ApplicationConfig.java</file>
-            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Sucursal.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/SucursalMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/SucursalImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/SucursalWS.java</file>
@@ -23,6 +21,15 @@
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/ClienteMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/ClienteImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/ClienteWS.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Paquete.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Envio.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/EnvioMapper.xml</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/EnvioImp.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/EnvioWS.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/PaqueteMapper.xml</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/PaqueteImp.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/PaqueteWS.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Colaborador.java</file>
         </group>
     </open-files>
 </project-private>
