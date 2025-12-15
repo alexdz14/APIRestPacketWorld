@@ -22,18 +22,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <select id="login" resultMap="mapaColaborador" parameterType="map">
         SELECT 
-            id_colaborador, 
-            no_personal, 
-            contrasenia, 
-            nombre, 
-            apellido_paterno, 
-            apellido_materno,
-            curp,
-            correo,
-            foto,
-            rol,
-            num_licencia,
-            id_sucursal
+        id_colaborador, 
+        no_personal, 
+        contrasenia, 
+        nombre, 
+        apellido_paterno, 
+        apellido_materno,
+        curp,
+        correo,
+        foto,
+        rol,
+        num_licencia,
+        id_sucursal
         FROM colaborador
         WHERE no_personal = #{noPersonal} 
         AND contrasenia = #{contrasenia}
@@ -41,22 +41,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     
     <insert id="registrar" parameterType="pojo.Colaborador">
         INSERT INTO colaborador 
-            (no_personal, contrasenia, nombre, apellido_paterno, apellido_materno, curp, correo, foto, rol, num_licencia, id_sucursal)
+        (no_personal, contrasenia, nombre, apellido_paterno, apellido_materno, curp, correo, foto, rol, num_licencia, id_sucursal)
         VALUES 
-            (#{noPersonal}, #{contrasenia}, #{nombre}, #{apellidoPaterno}, #{apellidoMaterno}, #{curp}, #{correo}, #{foto}, #{rol}, #{numLicencia}, #{idSucursal})
+        (#{noPersonal}, #{contrasenia}, #{nombre}, #{apellidoPaterno}, #{apellidoMaterno}, #{curp}, #{correo}, #{foto}, #{rol}, #{numLicencia}, #{idSucursal})
     </insert>
     
     <update id="editar" parameterType="pojo.Colaborador">
         UPDATE colaborador SET
-            contrasenia = #{contrasenia},
-            nombre = #{nombre},
-            apellido_paterno = #{apellidoPaterno},
-            apellido_materno = #{apellidoMaterno},
-            curp = #{curp},
-            correo = #{correo},
-            foto = #{foto},
-            num_licencia = #{numLicencia},
-            id_sucursal = #{idSucursal}
+        contrasenia = #{contrasenia},
+        nombre = #{nombre},
+        apellido_paterno = #{apellidoPaterno},
+        apellido_materno = #{apellidoMaterno},
+        curp = #{curp},
+        correo = #{correo},
+        foto = #{foto},
+        num_licencia = #{numLicencia},
+        id_sucursal = #{idSucursal}
         WHERE no_personal = #{noPersonal}
     </update>
     
@@ -68,15 +68,24 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <select id="buscar" resultMap="mapaColaborador" parameterType="string">
         SELECT * FROM colaborador
         WHERE no_personal LIKE #{filtro}
-           OR nombre LIKE #{filtro}
-           OR rol LIKE #{filtro}
-           OR apellido_paterno LIKE #{filtro}
+        OR nombre LIKE #{filtro}
+        OR rol LIKE #{filtro}
+        OR apellido_paterno LIKE #{filtro}
     </select>
     
-    <select id="getAll" resultType="pojo.Colaborador">
+    <select id="getAll" resultMap="mapaColaborador">
         SELECT 
-            idColaborador, noPersonal, nombre, apellidoPaterno, apellidoMaterno, 
-            curp, correo, foto, rol, numLicencia, idSucursal 
+        id_colaborador, 
+        no_personal, 
+        nombre, 
+        apellido_paterno, 
+        apellido_materno, 
+        curp, 
+        correo, 
+        foto, 
+        rol, 
+        num_licencia, 
+        id_sucursal 
         FROM colaborador
     </select>
     
