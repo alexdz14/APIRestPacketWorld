@@ -17,19 +17,19 @@
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/UnidadMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/UnidadImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/UnidadWS.java</file>
-            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Cliente.java</file>
-            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/ClienteMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/ClienteImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/ClienteWS.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Paquete.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Envio.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/EnvioMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/EnvioImp.java</file>
-            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/EnvioWS.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/PaqueteMapper.xml</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/dominio/PaqueteImp.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/PaqueteWS.java</file>
             <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/pojo/Colaborador.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/modelo/mybatis/mapper/ClienteMapper.xml</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/ws/EnvioWS.java</file>
+            <file>file:/D:/stivm/Documentos/NetBeansProjects/APIRestPacketWorld/src/java/utilidades/ConsumoAPI.java</file>
         </group>
     </open-files>
 </project-private>

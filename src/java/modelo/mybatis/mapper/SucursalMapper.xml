@@ -46,5 +46,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <select id="getAll" resultMap="mapaSucursal">
         SELECT * FROM sucursal
     </select>
+    
+    <select id="getById" resultType="pojo.Sucursal" parameterType="int">
+        SELECT 
+            id_sucursal AS idSucursal,
+            codigo_sucursal AS codigoSucursal,
+            nombre,
+            calle,
+            numero,
+            colonia,
+            cp,
+            ciudad,
+            estado,
+            estatus
+        FROM sucursal
+        WHERE id_sucursal = #{idSucursal}
+    </select>
 
 </mapper>
